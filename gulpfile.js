@@ -51,27 +51,23 @@ gulp.task('clean', function () {
 // Watch
 gulp.task('watch', function () {
     // Watch .scss files
-    gulp.watch('src/stylesheets/**/*.scss', function (event) {
+    gulp.watch('src/stylesheets/**/*.scss', ['styles']).on('change', function (event) {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-        gulp.run('styles');
     });
 
     // Watch .js files
-    gulp.watch('src/scripts/*.js', function(event) {
+    gulp.watch('src/scripts/*.js', ['scripts']).on('change', function(event) {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-        gulp.run('scripts');
     });
 
     // Watch image files
-    gulp.watch('src/images/**/*', function(event) {
+    gulp.watch('src/images/**/*', ['images']).on('change', function(event) {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-        gulp.run('images');
     });
 
     // Watch template files
-    gulp.watch('src/content/**/*.+(html|nunjucks)', function(event) {
+    gulp.watch('src/content/**/*.+(html|nunjucks)', ['templates']).on('change', function(event) {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-        gulp.run('templates');
     });
 
 });
