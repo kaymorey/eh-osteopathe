@@ -8,7 +8,12 @@
 </head>
 <body>
 
-    {% block content %} {% endblock %}
+    <div id="main-container">
+        {% include 'partials/_navigation.nunjucks' %}
+        {% include 'partials/_header.nunjucks' %}
+
+        {% block content %} {% endblock %}
+    </div>
 
 </body>
 </html>

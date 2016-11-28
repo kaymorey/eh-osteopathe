@@ -1,5 +1,11 @@
 @import 'include/variables';
+@import 'include/reset';
 
 body {
-    background-color: $blue;
+    background-color: $beige;
+}
+
+#main-container {
+    width: 1200px;
+    margin: 0 auto;
 }
