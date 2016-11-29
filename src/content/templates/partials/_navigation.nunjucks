@@ -1,33 +1,33 @@
-<nav class="header">
-    <div class="header-container">
-        <a href="#" class="header__logo">
+<nav class="navigation">
+    <div class="navigation-container">
+        <a href="#" class="navigation__logo">
             <span>E</span>
-            <span class="header-logo__letter--right">H</span>
+            <span class="navigation-logo__letter--right">H</span>
         </a>
-        <ul class="header__menu">
-            <li class="header-menu__item">
-                <a href="#" class="header-menu__link" title="Accueil">
+        <ul class="navigation__menu">
+            <li class="navigation-menu__item">
+                <a href="#" class="navigation-menu__link" title="Accueil">
                     Accueil
                 </a>
             </li>
-            <li class="header-menu__item">
-                <a href="#" class="header-menu__link" title="Votre praticien">
+            <li class="navigation-menu__item">
+                <a href="#" class="navigation-menu__link" title="Votre praticien">
                     Votre praticien
                 </a>
             </li>
-            <li class="header-menu__item">
-                <a href="#" class="header-menu__link" title="La consultation">
+            <li class="navigation-menu__item">
+                <a href="#" class="navigation-menu__link" title="La consultation">
                     La consultation
                 </a>
             </li>
         </ul>
-        <ul class="header__flags">
-            <li class="header-flags__item">
+        <ul class="navigation__flags">
+            <li class="navigation-flags__item">
                 <a href="#">
                     <img src="../images/flag-france.png">
                 </a>
             </li>
-            <li class="header-flags__item">
+            <li class="navigation-flags__item">
                 <a href="#">
                     <img src="../images/flag-turkey.png">
                 </a>
