@@ -1,0 +1,19 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 1.6em;
+    // line-height: 1.625em;
+    color: $text-color;
+    background-color: $beige;
+}
+
+a {
+    text-decoration: none;
+}
+
+em {
+    font-style: italic;
+}

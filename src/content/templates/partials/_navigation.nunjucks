@@ -1,34 +1,37 @@
-<nav>
-    <a href="#">
-        <img src="">
-    </a>
-    <ul>
-        <li>
-            <a href="#">
-                Accueil
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                Votre praticien
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                La consultation
-            </a>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <a href="#">
-                <img src="">
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img src="">
-            </a>
-        </li>
-    </ul>
+<nav class="header">
+    <div class="header-container">
+        <a href="#" class="header__logo">
+            <span>E</span>
+            <span class="header-logo__letter--right">H</span>
+        </a>
+        <ul class="header__menu">
+            <li class="header-menu__item">
+                <a href="#" class="header-menu__link" title="Accueil">
+                    Accueil
+                </a>
+            </li>
+            <li class="header-menu__item">
+                <a href="#" class="header-menu__link" title="Votre praticien">
+                    Votre praticien
+                </a>
+            </li>
+            <li class="header-menu__item">
+                <a href="#" class="header-menu__link" title="La consultation">
+                    La consultation
+                </a>
+            </li>
+        </ul>
+        <ul class="header__flags">
+            <li class="header-flags__item">
+                <a href="#">
+                    <img src="../images/flag-france.png">
+                </a>
+            </li>
+            <li class="header-flags__item">
+                <a href="#">
+                    <img src="../images/flag-turkey.png">
+                </a>
+            </li>
+        </ul>
+    </div>
 </nav>

@@ -1,11 +1,7 @@
 @import 'include/variables';
 @import 'include/reset';
+@import 'include/fonts';
+@import 'include/base';
+@import 'include/layout';
 
-body {
-    background-color: $beige;
-}
-
-#main-container {
-    width: 1200px;
-    margin: 0 auto;
-}
+@import 'partials/header';

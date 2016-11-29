@@ -34,6 +34,12 @@ gulp.task('images', function () {
         .pipe(gulp.dest('dist/images'));
 });
 
+// Fonts
+gulp.task('fonts', function () {
+    return gulp.src('src/fonts/**/*')
+        .pipe(gulp.dest('dist/fonts'));
+});
+
 // Template files
 gulp.task('templates', function () {
     return gulp.src('src/content/pages/**/*.+(html|nunjucks)')
@@ -45,7 +51,9 @@ gulp.task('templates', function () {
 
 // Clean
 gulp.task('clean', function () {
-    return del(['dist/stylesheets', 'dist/scripts', 'dist/images']);
+    return del(['dist/stylesheets', 'dist/scripts', 'dist/images'], {
+        force: true
+    });
 });
 
 // Watch
@@ -60,8 +68,13 @@ gulp.task('watch', function () {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
 
-    // Watch image files
+    // Watch images files
     gulp.watch('src/images/**/*', ['images']).on('change', function(event) {
+        console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+    });
+
+    // Watch fonts files
+    gulp.watch('src/fonts/**/*', ['fonts']).on('change', function(event) {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
 
@@ -73,7 +86,7 @@ gulp.task('watch', function () {
 });
 
 // Default task
-gulp.task('default', ['styles', 'scripts', 'images', 'templates', 'clean']);
+gulp.task('default', ['clean', 'styles', 'scripts', 'images', 'fonts', 'templates']);
 
 // Webserver task
 gulp.task('webserver', ['default', 'watch'], function () {
