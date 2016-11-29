@@ -1,0 +1,23 @@
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer__block">
+            <h5 class="footer__title">Emine Hakan</h5>
+            <p class="footer__text">Ostéopathe D.O.</p>
+        </div>
+        <div class="footer__block">
+            <h5 class="footer__title">Adresse du cabinet</h5>
+            <p class="footer__text">
+                15 rue du Chalet<br>
+                93370 MONTFERMEIL
+            </p>
+        </div>
+        <div class="footer__block">
+            <h5 class="footer__title">Téléphone</h5>
+            <p class="footer__text">01. 72. 51. 83. 53</p>
+        </div>
+        <div class="footer__block">
+            <h5 class="footer__title">E-mail</h5>
+            <p class="footer__text">eminehkn.osteo@gmail.com</p>
+        </div>
+    </div>
+</footer>
