@@ -7,3 +7,17 @@
 @import 'partials/navigation';
 @import 'partials/header';
 @import 'partials/footer';
+
+@import 'index';
+
+#container {
+    padding: 70px 62px 60px 62px;
+    width: calc(#{$container-width} - 62px*2);
+    margin: 0 auto;
+    background-color: #FFF;
+    border-radius: 5px;
+
+    margin-top: -50px;
+    position: relative;
+    z-index: 200;
+}
