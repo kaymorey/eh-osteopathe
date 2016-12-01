@@ -1,5 +1,9 @@
 {% extends "layout.nunjucks" %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+{% endblock %}
+
 {% block content %}
     <section class="home__definition">
         <h3 class="l-section-title">Définition de l'ostéopathie</h3>
@@ -17,7 +21,7 @@
     <section class="home__fields">
         <header class="home-fields__header l-image-title-text">
             <div class="l-image--left">
-                <img src="images/definition.png" alt="">
+                <img src="images/fields.png" alt="">
             </div>
             <div class="l-title-text--right">
                 <h3 class="l-section-title">Champs d'application :</h3>
@@ -99,7 +103,7 @@
         </article>
         <article class="home-articles__article">
             <header>
-                <img src="images/article.jpg" alt="" class="home-article__img">
+                <img src="http://lorempixel.com/266/175" alt="" class="home-article__img">
                 <h4 class="home-article__title">Qu'est-ce que les facias ?</h4>
             </header>
             <p class="home-article__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum</p>
@@ -113,5 +117,8 @@
             <p class="home-article__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum</p>
             <a href="#" class="home-article__link">Lire l'article</a>
         </article>
+        <div class="home-articles__see-all-container">
+            <button class="home-articles__see-all">Voir tous les articles</button>
+        </div>
     </section>
 {% endblock %}

@@ -1,3 +1,5 @@
+@import 'main';
+
 .home__definition {
     padding-bottom: 70px;
 
@@ -71,14 +73,15 @@
 
 .home__articles {
     padding: 50px 0 0 0;
+    font-size: 0;
 
     .home-articles__article {
         display: inline-block;
         width: 266px;
 
-        // &:nth-child(3n+2) {
-        //     padding: 0 19px;
-        // }
+        &:nth-of-type(3n+2) {
+            padding: 0 19px;
+        }
     }
 
     .home-article__img {
@@ -99,5 +102,24 @@
         font-size: 1.4rem;
         font-weight: 500;
         color: $second-color;
+    }
+
+    .home-articles__see-all-container {
+        padding-top: 45px;
+        text-align: center;
+
+        .home-articles__see-all {
+            width: 209px;
+            height: 45px;
+            border: none;
+            border-radius: 20px;
+            padding: 0;
+            line-height: 45px;
+            background-color: $beige;
+            font-size: 1.6rem;
+            font-family: 'Roboto', Arial, sans-serif;
+            color: $text-color;
+            cursor: pointer;
+        }
     }
 }

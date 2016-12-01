@@ -8,8 +8,6 @@
 @import 'partials/header';
 @import 'partials/footer';
 
-@import 'index';
-
 #container {
     padding: 70px 62px 60px 62px;
     width: calc(#{$container-width} - 62px*2);
