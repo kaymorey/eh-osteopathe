@@ -1,0 +1,20 @@
+@import 'index';
+
+.home-turkish-definition__link {
+    text-decoration: underline;
+    color: $second-color;
+}
+
+.home-turkish__fields {
+    padding-top: 60px;
+
+    .home-fields__header {
+        text-align: center;
+    }
+
+    .home-turkish-fields__title {
+        padding-top: 38px;
+    }
+}
+
+

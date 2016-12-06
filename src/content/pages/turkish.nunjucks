@@ -1,0 +1,78 @@
+{% extends 'layout.nunjucks' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="stylesheets/turkish.css">
+{% endblock %}
+
+{% block content %}
+    <section class="home__definition">
+        <h3 class="l-section-title">Osteopati nedir ?</h3>
+        <p class="home-definition__text l-text-default">
+            Osteopati ilk kez 1874 yılında Amerikalı bir doktor olan Andrew Taylor Still tarafından doğal terapi yöntemi olarak geliştirilmiş, tüm dolaşım sisteminin ve biomekanizmanın, özellikle omurga ve hareket sisteminin doğru düzenlenmesini sağlamak amacı ile uygulanmaya başlanmış bir manuel terapi yöntemidir.
+            <br><br>
+            Osteopati, vücuttaki problemi sadece ağrı olan bölgede aramaz. Ağrının kaynağını tespit ederek sorunu çözmeye çalışır.
+            <br><br>
+            Osteopati'nin uygulanma alanı çok geniş olmakla beraber, çağımızın yaygın problemi olan kas ve iskeletsel ağrılar başta olmak üzere bir çok problemin teşhis ve tedavisini, ameliyatsız ve ilaçsız yapan bir bilim alanıdır.
+            <br><br>
+            Vücudun bir bütün olarak fonksiyon gösterdiği, kas ve eklemlerdeki ağrıların kan dolaşımını ve sinir sisteminide etkilediği, dolayısıyla hastalıklara sebep olduğu prensibine dayanır. Osteopat'lar uyguladıkları manuel terapi yöntemleri ile vücuttaki bu ahengin sağlanması için çalışırlar. Bebeklerden yaşlılığa kadar bütün kitlelerde ağrısız ve tehlikesiz uygulanabilir. Osteopatik tedavi ağrının olduğu bölgenin tedavisi ile birlikte, genel sağlığın ve yaşam kalitesinin düzeltilmesindede faydalıdır.
+            <br><br>
+            Genelde kas ve eklem ağrılarının giderilmesi bir kaç seansta mümkün olmakla beraber, kronik problemlerin tedavisi uzun zaman içinde kontrol edilmesi gerekebilir ve hastaya egzersiz programları verilebilir.
+            <br><br>
+            Daha fazla bilgi için, Dr Elif KAYA web sitesine yönlene bilirsiniz.<br>
+            <a href="http://www.elifkaya.net/banners-view/osteopati/" class="home-turkish-definition__link">http://www.elifkaya.net/banners-view/osteopati/</a>
+        </p>
+    </section>
+    <hr class="l-section-separator">
+    <section class="home__fields home-turkish__fields">
+        <header class="home-fields__header">
+            <img src="images/fields.png" alt="">
+            <h3 class="l-section-title home-turkish-fields__title">Osteopatinin Kullanıldığı Hastalıklar</h3>
+        </header>
+        <ul class="home-fields__list home-fields__list--left l-text-default">
+            <li class="home-fields__item">
+                Bel, boyun, sırt ağrılarında ve fıtıklarında ;
+            </li>
+            <li class="home-fields__item">
+                Migren ve gerilim tipi baş ağrılarında ;
+            </li>
+            <li class="home-fields__item">
+                Skolyoz gibi postür bozukluklarında kaynaklanan ağrılar ;
+            </li>
+            <li class="home-fields__item">
+                Ameliyat sonrası ağrı ve yapışıklıkların giderilmesinde ;
+            </li>
+            <li class="home-fields__item">
+                Dolaşım sorunları rahatsızlıklarında, (kan ve lenfatik sistem) ;
+            </li>
+            <li class="home-fields__item">
+                Hareket ve fonksiyon bozukluklarında ;
+            </li>
+            <li class="home-fields__item">
+                Yürüme, denge ve koordinasyon bozukluğunda ;
+            </li>
+            <li class="home-fields__item">
+                Fibromyalji sendromunda ;
+            </li>
+        </ul>
+        <ul class="home-fields__list home-fields__list--right l-text-default">
+            <li class="home-fields__item">
+                Eklem sertliği, kireçlenme gibi artrozik değişikliklerde ;
+            </li>
+            <li class="home-fields__item">
+                Eklem blokajları, omurga ve costa blokajlarında ;
+            </li>
+            <li class="home-fields__item">
+                Kabızlık, ishal, idrar kaçırma, hazımsızlık, gaz, karın ağrısı, spastik kolon, pitozis ve hazım organlarının fonksiyon bozukluklarında destekleyici tedavi olarak kullanılır ;
+            </li>
+            <li class="home-fields__item">
+                amilelik ile ilgili eklem ağrıları ;
+            </li>
+            <li class="home-fields__item">
+                Bebeklerde yutkunma, kusma, kafa şekil bozukluğunda;
+            </li>
+            <li class="home-fields__item">
+                Romatizmal hastalıklarda osteopati destekleyici tedavi olarak kullanılabilir.
+            </li>
+        </ul>
+    </section>
+{% endblock %}

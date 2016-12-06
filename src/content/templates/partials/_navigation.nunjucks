@@ -23,12 +23,12 @@
         </ul>
         <ul class="navigation__flags">
             <li class="navigation-flags__item">
-                <a href="#">
+                <a href="/">
                     <img src="../images/flag-france.png">
                 </a>
             </li>
             <li class="navigation-flags__item">
-                <a href="#">
+                <a href="/turque.html">
                     <img src="../images/flag-turkey.png">
                 </a>
             </li>
