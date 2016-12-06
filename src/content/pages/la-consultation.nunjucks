@@ -1,5 +1,7 @@
 {% extends 'layout.nunjucks' %}
 
+{% set navItem = 'consultation' %}
+
 {% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="stylesheets/consultation.css">
 {% endblock %}
