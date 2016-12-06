@@ -16,7 +16,7 @@
                 </a>
             </li>
             <li class="navigation-menu__item">
-                <a href="#" class="navigation-menu__link" title="La consultation">
+                <a href="/la-consultation.html" class="navigation-menu__link" title="La consultation">
                     La consultation
                 </a>
             </li>
