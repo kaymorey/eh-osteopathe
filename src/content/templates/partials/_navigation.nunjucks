@@ -11,7 +11,7 @@
                 </a>
             </li>
             <li class="navigation-menu__item">
-                <a href="#" class="navigation-menu__link" title="Votre praticien">
+                <a href="/votre-praticien.html" class="navigation-menu__link" title="Votre praticien">
                     Votre praticien
                 </a>
             </li>
