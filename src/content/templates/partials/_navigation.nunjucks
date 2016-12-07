@@ -1,17 +1,17 @@
 <nav class="navigation">
     <div class="navigation-container">
-        <a href="#" class="navigation__logo">
+        <a href="/" class="navigation__logo">
             <span>E</span>
             <span class="navigation-logo__letter--right">H</span>
         </a>
         <ul class="navigation__menu">
             <li class="navigation-menu__item">
-                <a href="#" class="navigation-menu__link" title="Accueil">
+                <a href="/" class="navigation-menu__link{% if navItem == 'home' %} selected{% endif %}" title="Accueil">
                     Accueil
                 </a>
             </li>
             <li class="navigation-menu__item">
-                <a href="/votre-praticien.html" class="navigation-menu__link" title="Votre praticien">
+                <a href="/votre-praticien.html" class="navigation-menu__link{% if navItem == 'praticien' %} selected{% endif %}" title="Votre praticien">
                     Votre praticien
                 </a>
             </li>
@@ -28,7 +28,7 @@
                 </a>
             </li>
             <li class="navigation-flags__item">
-                <a href="/turque.html">
+                <a href="/turkish.html">
                     <img src="../images/flag-turkey.png">
                 </a>
             </li>

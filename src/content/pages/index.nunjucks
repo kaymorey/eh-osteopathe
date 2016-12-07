@@ -1,5 +1,7 @@
 {% extends 'layout.nunjucks' %}
 
+{% set navItem = 'home' %}
+
 {% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
 {% endblock %}

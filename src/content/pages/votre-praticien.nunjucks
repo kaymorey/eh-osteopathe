@@ -1,5 +1,7 @@
 {% extends 'layout.nunjucks' %}
 
+{% set navItem = 'praticien' %}
+
 {% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="stylesheets/about.css">
 {% endblock %}
