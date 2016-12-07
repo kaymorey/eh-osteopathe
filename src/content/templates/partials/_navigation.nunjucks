@@ -5,6 +5,13 @@
             <span class="navigation-logo__letter--right">H</span>
         </a>
         <ul class="navigation__menu">
+            {% if locale == 'tr-TR' %}
+                <li class="navigation-menu__item">
+                    <a href="/turkish.html" class="navigation-menu__link selected" title="Ana sayfa">
+                        Ana sayfa
+                    </a>
+                </li>
+            {% else %}
             <li class="navigation-menu__item">
                 <a href="/" class="navigation-menu__link{% if navItem == 'home' %} selected{% endif %}" title="Accueil">
                     Accueil
@@ -20,6 +27,7 @@
                     La consultation
                 </a>
             </li>
+            {% endif %}
         </ul>
         <ul class="navigation__flags">
             <li class="navigation-flags__item">
