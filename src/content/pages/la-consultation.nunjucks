@@ -1,6 +1,7 @@
 {% extends 'layout.nunjucks' %}
 
 {% set navItem = 'consultation' %}
+{% set title = 'La consultation - Emine Hakan - Ostéopathe D.O' %}
 
 {% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="stylesheets/consultation.css">

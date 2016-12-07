@@ -1,6 +1,7 @@
 {% extends 'layout.nunjucks' %}
 
 {% set navItem = 'praticien' %}
+{% set title = 'Votre praticien - Emine Hakan - Ostéopathe D.O.' %}
 
 {% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="stylesheets/about.css">

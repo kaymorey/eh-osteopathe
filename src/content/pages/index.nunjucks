@@ -1,6 +1,7 @@
 {% extends 'layout.nunjucks' %}
 
 {% set navItem = 'home' %}
+{% set title = 'Emine Hakan - Ostéopathe D.O.' %}
 
 {% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
