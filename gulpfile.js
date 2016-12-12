@@ -47,11 +47,17 @@ gulp.task('templates', function () {
             path: ['src/content/templates']
         }))
         .pipe(gulp.dest('dist/'));
+});
+
+// Move admin files
+gulp.task('admin', function () {
+    return gulp.src(['admin/**/*'], {dot: true})
+        .pipe(gulp.dest('dist/admin/'))
 })
 
 // Clean
 gulp.task('clean', function () {
-    return del(['dist/stylesheets', 'dist/scripts', 'dist/images'], {
+    return del(['dist/stylesheets', 'dist/scripts', 'dist/images', 'dist/admin'], {
         force: true
     });
 });
@@ -82,11 +88,10 @@ gulp.task('watch', function () {
     gulp.watch('src/content/**/*.+(html|nunjucks)', ['templates']).on('change', function(event) {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
-
 });
 
 // Default task
-gulp.task('default', ['clean', 'styles', 'scripts', 'images', 'fonts', 'templates']);
+gulp.task('default', ['clean', 'styles', 'scripts', 'images', 'fonts', 'templates', 'admin']);
 
 // Webserver task
 gulp.task('webserver', ['default', 'watch'], function () {
