@@ -1,0 +1,10 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+    <p>
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.description }}</p>
+    </p>
+{% endblock %}

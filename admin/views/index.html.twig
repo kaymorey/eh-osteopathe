@@ -1,0 +1,63 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h2 class="text-center">Ajouter un article</h2>
+            <br>
+            <form>
+                <div class="form-group">
+                    <label for="url">Url de la page</label>
+                    <input type="text" name="url" class="form-control">
+                </div>
+                <button class="btn btn-primary add-article" type="button">Ajouter</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<section>
+    <h2>Liste des articles</h2>
+    <table class="table">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Titre</th>
+            <th>Description</th>
+            <th>Lien</th>
+            <th style="min-width: 113px;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for article in articles %}
+        <tr>
+            <td>
+                <img src="{{ app.request.basepath }}/images/article.jpg" alt="" style="width: 200px;">
+            </td>
+            <td>
+                {{ article.title }}
+            </td>
+            <td>
+                {{ article.description }}
+            </td>
+            <td>
+                http://lien-de-mon-article/category/article.com
+            </td>
+            <td>
+                <div class="btn-group" role="group" aria-label="actions">
+                    <a href="{{ path('article', { 'id': article.id }) }}" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <a href="#" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </div>
+            </td>
+        {% endfor %}
+    </tbody>
+    </table>
+</section>
+{% endblock %}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="{{ app.request.basepath }}/stylesheets/bootstrap.css" rel="stylesheet">
+    <title>{% block title %}{% endblock %} - Admin</title>
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <p>
+                <img src="{{ app.request.basepath }}/images/logo.png">
+            </p>
+            <h2 class="text-primary">Emine Hakan - Ostéopathe D.O.<br><small>Gestion des articles</small></h2>
+        </header>
+
+        {% block content %}{% endblock %}
+
+        <hr>
+
+        <div class="panel">
+            <div class="panel-footer">
+                Un peu d'explications seront peut-être nécessaires...
+            </div>
+        </div>
+    </div>
+</body>
+</html>
