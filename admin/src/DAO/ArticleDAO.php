@@ -42,6 +42,41 @@ class ArticleDAO extends DAO
     }
 
     /**
+     * Saves an article into the database.
+     *
+     * @param \Admin\Domain\Article $article The article to save
+     */
+    public function save(Article $article) {
+        $articleData = array(
+            'title' => $article->getTitle(),
+            'image_url' => $article->getImageUrl(),
+            'description' => $article->getDescription(),
+            'url' => $article->getUrl()
+        );
+
+        if ($article->getId()) {
+            // The article has already been saved : update it
+            $this->getDb()->update('eh_article', $articleData, array('id' => $article->getId()));
+        } else {
+            // The article has never been saved : insert it
+            $this->getDb()->insert('eh_article', $articleData);
+            // Get the id of the newly created article and set it on the entity.
+            $id = $this->getDb()->lastInsertId();
+            $article->setId($id);
+        }
+    }
+
+    /**
+     * Removes an article from the database.
+     *
+     * @param integer $id The article id.
+     */
+    public function delete($id) {
+        // Delete the article
+        $this->getDb()->delete('eh_article', array('id' => $id));
+    }
+
+    /**
      * Creates an Article object based on a DB row.
      *
      * @param array $row The DB row containing Article data.

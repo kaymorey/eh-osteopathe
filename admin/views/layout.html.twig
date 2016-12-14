@@ -9,20 +9,25 @@
     <div class="container">
         <header class="page-header">
             <p>
-                <img src="{{ app.request.basepath }}/images/logo.png">
+                <a href={{ path('home') }}>
+                    <img src="{{ app.request.basepath }}/images/logo.png">
+                </a>
             </p>
             <h2 class="text-primary">Emine Hakan - Ostéopathe D.O.<br><small>Gestion des articles</small></h2>
         </header>
 
         {% block content %}{% endblock %}
 
+
+        {% if app.user and is_granted('IS_AUTHENTICATED_FULLY') %}
         <hr>
 
         <div class="panel">
             <div class="panel-footer">
-                Un peu d'explications seront peut-être nécessaires...
+                Vous êtes connecté en tant que {{ app.user.username }} - <a href="{{ path('logout') }}">Se déconnecter</a>
             </div>
         </div>
+        {% endif %}
     </div>
 </body>
 </html>
