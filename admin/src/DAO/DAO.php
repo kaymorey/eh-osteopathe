@@ -2,43 +2,37 @@
 
 namespace Admin\DAO;
 
+use Doctrine\DBAL\Connection;
+
 abstract class DAO
 {
     /**
-     * JSON file
+     * Database connection
      *
-     * @var string
+     * @var \Doctrine\DBAL\Connection
      */
-    private $file;
-
-    /**
-     * JSON data
-     *
-     * @var object
-     */
-    protected $data;
+    private $db;
 
     /**
      * Constructor
-     */
-    public function __construct() {
-        $this->file = '../web/data/data.json';
-
-        $json = file_get_contents($this->file);
-        $this->data = json_decode($json);
-    }
-
-    /**
-     * Grants access to the data object
      *
-     * @return The data object
+     * @param \Doctrine\DBAL\Connection The database connection object
      */
-    protected function getData() {
-        return $this->data;
+    public function __construct(Connection $db) {
+        $this->db = $db;
     }
 
     /**
-     * Builds a domain object from a JSON row.
+     * Grants access to the database connection object
+     *
+     * @return \Doctrine\DBAL\Connection The database connection object
+     */
+    protected function getDb() {
+        return $this->db;
+    }
+
+    /**
+     * Builds a domain object from a DB row.
      * Must be overridden by child classes.
      */
     protected abstract function buildDomainObject($row);

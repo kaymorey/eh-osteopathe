@@ -35,7 +35,7 @@
         {% for article in articles %}
         <tr>
             <td>
-                <img src="{{ app.request.basepath }}/images/article.jpg" alt="" style="width: 200px;">
+                <img src="{{ article.imageUrl }}" alt="" style="width: 200px;">
             </td>
             <td>
                 {{ article.title }}
@@ -44,7 +44,7 @@
                 {{ article.description }}
             </td>
             <td>
-                http://lien-de-mon-article/category/article.com
+                {{ article.url }}
             </td>
             <td>
                 <div class="btn-group" role="group" aria-label="actions">

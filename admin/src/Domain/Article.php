@@ -7,9 +7,16 @@ class Article
     /**
      * Article id.
      *
-     * @var string
+     * @var integer
      */
     private $id;
+
+    /**
+     * Article position (order).
+     *
+     * @var integer
+     */
+    private $position;
 
     /**
      * Article title.
@@ -23,7 +30,21 @@ class Article
      *
      * @var string
      */
-    private $descrption;
+    private $description;
+
+    /**
+     * Article image link.
+     *
+     * @var string
+     */
+    private $imageUrl;
+
+     /**
+     * Article url.
+     *
+     * @var string
+     */
+    private $url;
 
     public function getId() {
         return $this->id;
@@ -31,6 +52,15 @@ class Article
 
     public function setId($id) {
         $this->id = $id;
+        return $this;
+    }
+
+    public function getPosition() {
+        return $this->position;
+    }
+
+    public function setPosition($position) {
+        $this->position = $position;
         return $this;
     }
 
@@ -49,6 +79,24 @@ class Article
 
     public function setDescription($description) {
         $this->description = $description;
+        return $this;
+    }
+
+    public function getImageUrl() {
+        return $this->imageUrl;
+    }
+
+    public function setImageUrl($imageUrl) {
+        $this->imageUrl = $imageUrl;
+        return $this;
+    }
+
+    public function getUrl() {
+        return $this->url;
+    }
+
+    public function setUrl($url) {
+        $this->url = $url;
         return $this;
     }
 }
