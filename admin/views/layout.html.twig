@@ -22,12 +22,15 @@
         {% if app.user and is_granted('IS_AUTHENTICATED_FULLY') %}
         <hr>
 
-        <div class="panel">
+        <footer class="panel">
             <div class="panel-footer">
                 Vous êtes connecté en tant que {{ app.user.username }} - <a href="{{ path('logout') }}">Se déconnecter</a>
             </div>
-        </div>
+        </footer>
         {% endif %}
     </div>
+
+    <script type="text/javascript" src="{{ app.request.basepath }}/scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="{{ app.request.basepath }}/scripts/bootstrap.min.js"></script>
 </body>
 </html>
