@@ -8,12 +8,12 @@
         <div class="col-md-6 col-md-offset-3">
             <h2 class="text-center">Ajouter un article</h2>
             <br>
-            <form>
+            <form action="{{ path('article.add') }}" method="POST">
                 <div class="form-group">
-                    <label for="url">Url de la page</label>
-                    <input type="text" name="url" class="form-control">
+                    <label for="url_for_opengraph">Url de la page</label>
+                    <input type="text" name="url_for_opengraph" class="form-control">
                 </div>
-                <button class="btn btn-primary add-article" type="button">Ajouter</button>
+                <button class="btn btn-primary add-article" type="submit">Ajouter</button>
             </form>
         </div>
     </div>
@@ -48,7 +48,7 @@
             </td>
             <td>
                 <div class="btn-group" role="group" aria-label="actions">
-                    <a href="{{ path('article_edit', { 'id': article.id }) }}" class="btn btn-primary">
+                    <a href="{{ path('article.edit', { 'id': article.id }) }}" class="btn btn-primary">
                         <span class="glyphicon glyphicon-pencil"></span>
                     </a>
                     <a href="#" class="btn btn-danger">

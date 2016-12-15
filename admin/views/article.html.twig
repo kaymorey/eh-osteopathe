@@ -1,17 +1,13 @@
 {% extends "layout.html.twig" %}
 
-{% block title %}{% if article is defined %}Modification d'un article{% else %}Ajout d'un article{% endif %}{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    <a href="{{ path('home') }}" class="btn btn-primary">
+    <a href="{{ path('default.index') }}" class="btn btn-primary">
         <span class="glyphicon glyphicon-chevron-left"></span> Retour à l'accueil
     </a>
     <h2>
-        {% if article is defined %}
-            Modification d'un article
-        {% else %}
-            Ajout d'un article
-        {% endif %}
+        {{ title }}
     </h2>
     {% for flashMessage in app.session.flashbag.get('success') %}
         <div class="alert alert-success">
@@ -71,7 +67,7 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-4 col-sm-3">
-                    <input type="submit" class="btn btn-primary" value="Mettre à jour l'article" />
+                    <input type="submit" class="btn btn-primary" value="{{ submit }}" />
                 </div>
             </div>
         {{ form_end(articleForm) }}
