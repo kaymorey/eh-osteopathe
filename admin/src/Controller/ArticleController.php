@@ -73,7 +73,7 @@ Class ArticleController {
         $app['dao.article']->delete($id);
         $app['session']->getFlashBag()->add('success', 'The article was succesfully removed.');
 
-        return $app->redirect($app['url_generator']->generate('home'));
+        return $app->redirect($app['url_generator']->generate('default.index'));
     }
 
     /**
