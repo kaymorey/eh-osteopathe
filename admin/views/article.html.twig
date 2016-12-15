@@ -25,10 +25,10 @@
                     'class': 'col-sm-4 control-label'
                 }}) }}
                 <div class="col-sm-6">
-                    {{ form_errors(articleForm.title) }}
                     {{ form_widget(articleForm.title, { 'attr':  {
                         'class': 'form-control'
                     }}) }}
+                    <div class="text-danger">{{ form_errors(articleForm.title) }}</div>
                 </div>
             </div>
             <div class="form-group">
@@ -36,11 +36,11 @@
                     'class': 'col-sm-4 control-label'
                 }}) }}
                 <div class="col-sm-6">
-                    {{ form_errors(articleForm.description) }}
                     {{ form_widget(articleForm.description, { 'attr':  {
                         'rows': '4',
                         'class': 'form-control'
                     }}) }}
+                    <div class="text-danger">{{ form_errors(articleForm.description) }}</div>
                 </div>
             </div>
             <div class="form-group">
@@ -48,11 +48,11 @@
                     'class': 'col-sm-4 control-label'
                 }}) }}
                 <div class="col-sm-6">
-                    {{ form_errors(articleForm.image_url) }}
                     {{ form_widget(articleForm.image_url, { 'attr':  {
                         'class': 'form-control'
                     }}) }}
-                    {% if article is defined %}
+                    <div class="text-danger">{{ form_errors(articleForm.image_url) }}</div>
+                    {% if article is defined and article.imageUrl is not empty %}
                         <img src="{{ article.imageUrl }}" alt="">
                     {% endif %}
                 </div>
@@ -62,10 +62,10 @@
                     'class': 'col-sm-4 control-label'
                 }}) }}
                 <div class="col-sm-6">
-                    {{ form_errors(articleForm.url) }}
                     {{ form_widget(articleForm.url, { 'attr':  {
                         'class': 'form-control'
                     }}) }}
+                    <div class="text-danger">{{ form_errors(articleForm.url) }}</div>
                 </div>
             </div>
             <div class="form-group">

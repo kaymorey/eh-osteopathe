@@ -31,6 +31,7 @@ Class ArticleController {
             $app['session']->getFlashBag()->add('success', 'L\'article a été créé avec succès.');
         }
         return $app['twig']->render('article.html.twig', array(
+            'article'     => $article,
             'articleForm' => $articleForm->createView(),
             'title'       => 'Ajout d\'un article',
             'submit'      => 'Ajouter'
