@@ -28,7 +28,7 @@ Class ArticleController {
 
         if ($articleForm->isSubmitted() && $articleForm->isValid() && !$urlForOpengraph) {
             $app['dao.article']->save($article);
-            $app['session']->getFlashBag()->add('success', 'The article was successfully created.');
+            $app['session']->getFlashBag()->add('success', 'L\'article a été créé avec succès.');
         }
         return $app['twig']->render('article.html.twig', array(
             'articleForm' => $articleForm->createView(),
@@ -51,7 +51,7 @@ Class ArticleController {
 
         if ($articleForm->isSubmitted() && $articleForm->isValid()) {
             $app['dao.article']->save($article);
-            $app['session']->getFlashBag()->add('success', 'Your article was succesfully modified.');
+            $app['session']->getFlashBag()->add('success', 'Votre article a bien été modifié.');
         }
 
         return $app['twig']->render('article.html.twig', array(
@@ -71,7 +71,7 @@ Class ArticleController {
      */
     public function deleteAction($id, Request $request, Application $app) {
         $app['dao.article']->delete($id);
-        $app['session']->getFlashBag()->add('success', 'The article was succesfully removed.');
+        $app['session']->getFlashBag()->add('success', 'L\'article a été supprimé avec succès.');
 
         return $app->redirect($app['url_generator']->generate('default.index'));
     }
