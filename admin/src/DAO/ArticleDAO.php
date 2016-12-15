@@ -12,7 +12,8 @@ class ArticleDAO extends DAO
      * @return array A list of all articles.
      */
     public function findAll() {
-        $sql = 'SELECT * from eh_article order by position';
+        $sql = 'SELECT * FROM eh_article ORDER BY eh_article.position';
+
         $result = $this->getDb()->fetchAll($sql);
 
         // Convert query result to an array of domain objects
@@ -32,13 +33,27 @@ class ArticleDAO extends DAO
      * @return \MicroCMS\Domain\Article|throws an exception if no matching article is found
      */
     public function find($id) {
-        $sql = 'SELECT * from eh_article WHERE id=?';
-        $row = $this->getDb()->fetchAssoc($sql, array($id));
+        $sql = 'SELECT * FROM eh_article WHERE eh_article.id=:id';
+
+        $statement = $this->getDb()->prepare($sql);
+        $statement->bindValue('id', $id);
+        $statement->execute();
+
+        $row = $statement->fetch();
 
         if ($row)
             return $this->buildDomainObject($row);
         else
             throw new \Exception('No article matching id ' . $id);
+    }
+
+    public function getNbArticles() {
+        $sql = 'SELECT COUNT(*) as count FROM eh_article';
+
+        $statement = $this->getDb()->executeQuery($sql);
+        $result = $statement->fetch();
+
+        return $result;
     }
 
     /**
@@ -59,10 +74,15 @@ class ArticleDAO extends DAO
             $this->getDb()->update('eh_article', $articleData, array('id' => $article->getId()));
         } else {
             // The article has never been saved : insert it
+            $nbArticles = $this->getNbArticles();
+            $position = $nbArticles['count'] + 1;
+            $articleData['position'] = $position;
+
             $this->getDb()->insert('eh_article', $articleData);
             // Get the id of the newly created article and set it on the entity.
             $id = $this->getDb()->lastInsertId();
             $article->setId($id);
+            $article->setPosition($position);
         }
     }
 
