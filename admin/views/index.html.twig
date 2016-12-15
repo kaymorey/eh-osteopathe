@@ -29,60 +29,65 @@
     </div>
     {% endfor %}
     <h2>Liste des articles</h2>
-    <table class="table">
-    <thead>
-        <tr>
-            <th>Image</th>
-            <th>Titre</th>
-            <th>Description</th>
-            <th>Lien</th>
-            <th style="min-width: 113px;">Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for article in articles %}
-        <tr>
-            <td>
-                <img src="{{ article.imageUrl }}" alt="" style="width: 200px;">
-            </td>
-            <td>
-                {{ article.title }}
-            </td>
-            <td>
-                {{ article.description }}
-            </td>
-            <td>
-                {{ article.url }}
-            </td>
-            <td>
-                <div class="btn-group" role="group" aria-label="actions">
-                    <a href="{{ path('article.edit', { 'id': article.id }) }}" class="btn btn-primary">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </a>
-                    <button class="btn btn-danger" data-toggle="modal" data-target="#delete{{ article.id }}">
-                        <span class="glyphicon glyphicon-trash"></span>
-                    </button>
-                    <div class="modal fade" id="delete{{ article.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title" id="myModalLabel">Confirmation de la suppression</h4>
-                                </div>
-                                <div class="modal-body">
-                                    Voulez-vous vraiment supprimer cet article ?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
-                                    <a href="{{ path('article.delete', { 'id': article.id }) }}" class="btn btn-danger">Confirmer</a>
-                                </div>
-                            </div><!-- /.modal-content -->
-                        </div><!-- /.modal-dialog -->
-                    </div><!-- /.modal -->
-                </div>
-            </td>
-        {% endfor %}
-    </tbody>
+    <div style="background-color:#c2c0e8; padding: 10px;">
+        <td colspan="5">
+            Seuls les {{ maxVisibleArticles }} premiers articles sont visibles sur le site. Glissez-déposez les lignes du tableau pour changer leur position.
+        </td>
+    </div>
+    <table class="table articles__table">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Lien</th>
+                <th style="min-width: 113px;">Actions</th>
+            </tr>
+        </thead>
+        <tbody class="articles-table__content">
+            {% for article in articles %}
+            <tr class="articles-table__row"{% if article.position > maxVisibleArticles %} style="opacity: 0.6;"{% endif %}>
+                <td>
+                    <img src="{{ article.imageUrl }}" alt="" style="width: 200px;">
+                </td>
+                <td>
+                    {{ article.title }}
+                </td>
+                <td>
+                    {{ article.description }}
+                </td>
+                <td>
+                    {{ article.url }}
+                </td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="actions">
+                        <a href="{{ path('article.edit', { 'id': article.id }) }}" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#delete{{ article.id }}">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                        <div class="modal fade" id="delete{{ article.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h4 class="modal-title" id="myModalLabel">Confirmation de la suppression</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        Voulez-vous vraiment supprimer cet article ?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                                        <a href="{{ path('article.delete', { 'id': article.id }) }}" class="btn btn-danger">Confirmer</a>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+                    </div>
+                </td>
+            {% endfor %}
+        </tbody>
     </table>
 </section>
 {% endblock %}
