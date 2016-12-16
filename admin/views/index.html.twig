@@ -46,7 +46,7 @@
         </thead>
         <tbody class="articles-table__content">
             {% for article in articles %}
-            <tr class="articles-table__row"{% if article.position > maxVisibleArticles %} style="opacity: 0.6;"{% endif %}>
+            <tr class="articles-table__row"{% if article.position > maxVisibleArticles %} style="opacity: 0.6;"{% endif %} data-id="{{ article.id }}">
                 <td>
                     <img src="{{ article.imageUrl }}" alt="" style="width: 200px;">
                 </td>

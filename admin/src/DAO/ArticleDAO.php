@@ -75,7 +75,7 @@ class ArticleDAO extends DAO
         } else {
             // The article has never been saved : insert it
             $nbArticles = $this->getNbArticles();
-            $position = $nbArticles['count'] + 1;
+            $position = $nbArticles['count'];
             $articleData['position'] = $position;
 
             $this->getDb()->insert('eh_article', $articleData);
