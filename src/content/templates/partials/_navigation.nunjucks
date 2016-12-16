@@ -1,29 +1,29 @@
 <nav class="navigation">
     <div class="navigation-container">
-        <a href="/" class="navigation__logo">
+        <a href="index.html" class="navigation__logo">
             <span>E</span>
             <span class="navigation-logo__letter--right">H</span>
         </a>
         <ul class="navigation__menu">
             {% if locale == 'tr-TR' %}
                 <li class="navigation-menu__item">
-                    <a href="/turkish.html" class="navigation-menu__link selected" title="Ana sayfa">
+                    <a href="turkish.html" class="navigation-menu__link selected" title="Ana sayfa">
                         Ana sayfa
                     </a>
                 </li>
             {% else %}
             <li class="navigation-menu__item">
-                <a href="/" class="navigation-menu__link{% if navItem == 'home' %} selected{% endif %}" title="Accueil">
+                <a href="index.html" class="navigation-menu__link{% if navItem == 'home' %} selected{% endif %}" title="Accueil">
                     Accueil
                 </a>
             </li>
             <li class="navigation-menu__item">
-                <a href="/votre-praticien.html" class="navigation-menu__link{% if navItem == 'praticien' %} selected{% endif %}" title="Votre praticien">
+                <a href="votre-praticien.html" class="navigation-menu__link{% if navItem == 'praticien' %} selected{% endif %}" title="Votre praticien">
                     Votre praticien
                 </a>
             </li>
             <li class="navigation-menu__item">
-                <a href="/la-consultation.html" class="navigation-menu__link{% if navItem == 'consultation' %} selected{% endif %}" title="La consultation">
+                <a href="la-consultation.html" class="navigation-menu__link{% if navItem == 'consultation' %} selected{% endif %}" title="La consultation">
                     La consultation
                 </a>
             </li>
@@ -31,13 +31,13 @@
         </ul>
         <ul class="navigation__flags">
             <li class="navigation-flags__item">
-                <a href="/">
-                    <img src="../images/flag-france.png">
+                <a href="index.html">
+                    <img src="images/flag-france.png">
                 </a>
             </li>
             <li class="navigation-flags__item">
-                <a href="/turkish.html">
-                    <img src="../images/flag-turkey.png">
+                <a href="turkish.html">
+                    <img src="images/flag-turkey.png">
                 </a>
             </li>
         </ul>

@@ -78,6 +78,29 @@ Class ArticleController {
     }
 
     /**
+     * Edit articles position ajax action
+     *
+     * @param integer $id Article id
+     * @param Request $request Incoming request
+     * @param Application $app Silex application
+     */
+    public function editArticlesPositionAjaxAction(Request $request, Application $app) {
+        $articles = array();
+
+        if ($request->isXmlHttpRequest()) {
+            $id = $request->request->get('id');
+            $position = $request->request->get('position');
+            $app['dao.article']->updateArticlesPosition($id, $position);
+            $articles = $app['dao.article']->findAll();
+        }
+
+        return $app['twig']->render('partials/_articles-table-content.html.twig', array(
+            'articles'           => $articles,
+            'maxVisibleArticles' => 2
+        ));
+    }
+
+    /**
      * Create Article from OpenGraph data
      *
      * @param string $url Url to inspect

@@ -51,13 +51,13 @@ gulp.task('templates', function () {
 
 // Move admin files
 gulp.task('admin', function () {
-    return gulp.src(['admin/**/*'], {dot: true})
-        .pipe(gulp.dest('dist/admin/'))
+    return gulp.src(['Admin/**/*'], {dot: true})
+        .pipe(gulp.dest('dist/Admin/'))
 })
 
 // Clean
 gulp.task('clean', function () {
-    return del(['dist/stylesheets', 'dist/scripts', 'dist/images', 'dist/admin'], {
+    return del(['dist/stylesheets', 'dist/scripts', 'dist/images', 'dist/Admin'], {
         force: true
     });
 });

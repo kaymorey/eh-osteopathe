@@ -34,7 +34,7 @@
             Seuls les {{ maxVisibleArticles }} premiers articles sont visibles sur le site. Glissez-déposez les lignes du tableau pour changer leur position.
         </td>
     </div>
-    <table class="table articles__table">
+    <table class="table articles__table" data-path="{{ path('article.update.ajax') }}">
         <thead>
             <tr>
                 <th>Image</th>
@@ -46,7 +46,7 @@
         </thead>
         <tbody class="articles-table__content">
             {% for article in articles %}
-            <tr class="articles-table__row"{% if article.position > maxVisibleArticles %} style="opacity: 0.6;"{% endif %} data-id="{{ article.id }}">
+            <tr class="articles-table__row{% if article.position >= maxVisibleArticles %} articles-table__row--disabled{% endif %}" data-id="{{ article.id }}" data-position="{{ article.position }}">
                 <td>
                     <img src="{{ article.imageUrl }}" alt="" style="width: 200px;">
                 </td>

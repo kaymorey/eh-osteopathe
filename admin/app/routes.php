@@ -17,6 +17,9 @@ $app->match('article/edit/{id}', 'Admin\Controller\ArticleController::editAction
 // Delete an article
 $app->match('article/delete/{id}', 'Admin\Controller\ArticleController::deleteAction')->bind('article.delete');
 
+// Update articles list after position change
+$app->match('article/update/ajax', 'Admin\Controller\ArticleController::editArticlesPositionAjaxAction')->bind('article.update.ajax');
+
 // ---- ApiController ----
 // Get all articles
 $app->get('/api/articles', 'Admin\Controller\ApiController::getArticlesAction')->bind('api.articles');
