@@ -104,7 +104,7 @@
                     <h4 class="home-article__title">{{ article.title }}</h4>
                 </header>
                 <p class="home-article__text">{{ article.description }}</p>
-                <a href="{{ article.url }}" class="home-article__link">Lire l'article</a>
+                <a href="{{ article.url }}" class="home-article__link" target="_blank">Lire l'article</a>
             </article>
         {% endfor %}
         {% if articles|length > 3 %}

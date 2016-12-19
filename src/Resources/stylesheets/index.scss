@@ -1,5 +1,9 @@
 @import 'main';
 
+/**************************
+*     HOME DEFINITION     *
+***************************/
+
 .home__definition {
     padding-bottom: 70px;
 
@@ -9,6 +13,10 @@
         text-align: center;
     }
 }
+
+/**************************
+*       HOME FIELDS       *
+***************************/
 
 .home__fields {
     padding: 90px 0 40px 0;
@@ -67,9 +75,17 @@
     }
 }
 
+/**************************
+*       HOME LIMITS       *
+***************************/
+
 .home__limits {
     padding: 60px 0 60px 0;
 }
+
+/**************************
+*      HOME ARTICLES      *
+***************************/
 
 .home__articles {
     padding: 50px 0 0 0;
@@ -79,23 +95,13 @@
         display: inline-block;
         width: 266px;
         vertical-align: top;
-        padding-bottom: 19px;
 
         &:nth-of-type(3n+2) {
-            padding-left: 19px;
-            padding-right: 19px;
-        }
-
-        &.home-articles__article--hidden {
-            display: none;
+            padding: 0 19px;
         }
     }
 
-    .home-article__img-box {
-        width: 266px;
-        height: 175px;
-        background-size: cover;
-        background-position: center;
+    .home-article__img {
         margin-bottom: 20px;
     }
 
@@ -103,20 +109,26 @@
         padding-bottom: 10px;
         font-weight: 500;
         font-size: 1.7rem;
+        line-height: 2.2rem;
     }
     .home-article__text {
         padding-bottom: 25px;
         font-size: 1.4rem;
+        line-height: 2.2rem;
     }
 
     .home-article__link {
         font-size: 1.4rem;
         font-weight: 500;
         color: $second-color;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     .home-articles__see-all-container {
-        padding-top: 25px;
+        padding-top: 45px;
         text-align: center;
 
         .home-articles__see-all {
