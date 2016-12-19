@@ -37,6 +37,14 @@
     padding-top: 11px;
 }
 
+.about-accessibility__mail {
+    color: $text-color;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 .about-accessibility__map {
     width: 837px;
     height: 270px;
