@@ -6,7 +6,9 @@
             <h2 class="header__subtitle">Ostéopathe D. O.</h2>
             <p class="header__contact-information">
                 15 rue du Chalet, 93370 Montfermeil<br>
+                {% if locale is not defined or locale != 'tr-TR' %}
                 Consultation sur rendez-vous<br>
+                {% endif %}
                 01. 72. 51. 83. 53
             </p>
         </div>
