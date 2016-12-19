@@ -131,6 +131,11 @@
             font-family: 'Roboto', Arial, sans-serif;
             color: $text-color;
             cursor: pointer;
+
+            &:hover {
+                color: #FFF;
+                background-color: $second-color;
+            }
         }
     }
 }
