@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+
+        {% include 'partials/_navigation.html.twig' %}
+        {% include 'partials/_header.html.twig' %}
+
+        <div id="container">
+            {% block content %} {% endblock %}
+        </div>
+
+        {% include 'partials/_footer.html.twig' %}
+    </div>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

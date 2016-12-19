@@ -1,0 +1,40 @@
+.l-clear {
+    clear: both;
+}
+
+.l-text-default {
+    line-height: 1.625em;
+}
+
+.l-section-title {
+    margin-bottom: 30px;
+
+    font-size: 2.6rem;
+    color: $second-color;
+    font-weight: 500;
+    text-align: center;
+}
+
+.l-section-separator {
+    height: 1px;
+    margin: 0;
+    border: none;
+    background-color: #e8e8e8;
+}
+
+.l-image-title-text {
+    .l-image--left {
+        display: inline-block;
+        width: 246px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .l-title-text--right {
+        display: inline-block;
+        width: 573px;
+        vertical-align: middle;
+    }
+    .l-section-title {
+        text-align: left;
+    }
+}

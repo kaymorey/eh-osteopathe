@@ -1,0 +1,76 @@
+{% extends 'layout.html.twig' %}
+
+{% set navItem = 'praticien' %}
+{% set title = 'Votre praticien - Emine Hakan - Ostéopathe D.O.' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="stylesheets/about.css">
+{% endblock %}
+
+{% block content %}
+    <section class="about__whoiam">
+        <h3 class="l-section-title">Votre praticien</h3>
+        <div class="l-text-default">
+            <img src="images/about.jpg" class="about-whoiam__img">
+            <div class="about-whoiam__content">
+                <strong class="about-whoiam__name">Emine Hakan</strong>
+                <p>
+                    Diplômée d’une formation de 5 ans du Centre Européen d’Enseignement Supérieur de l’Ostéopathie à Paris, agrée par le ministère de la Santé et enregistrée au Répertoire National des Certifications Professionnelles niveau 1 (plus haute certification professionnelle en France).
+                    <br><br>
+                    Lors de sa formation, elle a acquis de multiples expériences, notamment la prise en charge des patients pendant 2 ans au sein de la clinique ostéopathique, ainsi qu'à l’hôpital du Kremlin-Bicêtre, mais aussi lors des raids sportifs, des événements humanitaires et dans le milieu des entreprises.
+                </p>
+                <p class="l-clear"></p>
+                <p>
+                    Elle a participé à des stages hospitaliers dans les services de Maternité et de Gynécologie-Obstétrique de l’hôpital du Kremlin-Bicêtre, dans le service d’imagerie médicale de l’hôpital Bichat à Paris et du centre cardiologique du nord à Saint-Denis. Elle a également assisté à des séances de dissection anatomique à l’Université Paris Descartes.
+                    <br><br>
+                    Elle a validé avec succès la rédaction et la soutenance de son mémoire de fin d'études, intitulé : « Efficacité de la prise en charge ostéopathique sur la limitation de l’ouverture buccale ainsi que sur la douleur des sujets présentant des dysfonctions de l’articulation temporo-mandibulaire » devant un jury d’experts, composé de médecins et d’ostéopathes.
+                    <br><br>
+                    Désormais, elle effectue des consultations à son cabinet qui se situe au 15 rue du Chalet à Montfermeil (93370). Elle prend également en charge des urgences ostéopathiques à domicile et effectue des interventions en entreprise.
+                </p>
+            </div>
+        </div>
+    </section>
+    <hr class="l-section-separator"></hr>
+    <section class="about__accesibility">
+        <h3 class="l-section-title about-accessibility__title">Accessibilité du cabinet</h3>
+        <img src="images/plaque.png" class="about-accessibility__plaque" alt="">
+        <div class="about-accessibility__text">
+            <p class="l-text-default">
+                15 rue du Chalet<br>
+                93370 MONTFERMEIL<br>
+                Cabinet au rez-de-chaussée, à droite après l’interphone.
+                <br><br>
+                <strong>Email :</strong> eminehkn.osteo@gmail.com<br>
+                <strong>tel :</strong> 01.72.51.83.53
+            </p>
+        </div>
+        <div class="about-accessibility__map" id="map">
+        </div>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+        function initMap() {
+            var latlng = {
+                lat: 48.900121,
+                lng: 2.557629
+            }
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: latlng,
+                zoom: 14,
+                disableDefaultUI: true
+            });
+
+            var image = 'images/map-pin.png';
+            var marker = new google.maps.Marker({
+                position: latlng,
+                map: map,
+                icon: image
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwyyHELVTx-MSS794FGUoQBo1qgtEKttI&callback=initMap"></script>
+
+{% endblock %}
