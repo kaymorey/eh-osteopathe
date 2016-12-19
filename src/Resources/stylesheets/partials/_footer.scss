@@ -51,6 +51,10 @@
     line-height: 1.6em;
     padding-left: 25px;
 
+    &:hover {
+        text-decoration: underline;
+    }
+
     &.footer__link--mail {
         padding-bottom: 2px;
         background: url('../images/icon-mail.png') no-repeat 0 4px;
