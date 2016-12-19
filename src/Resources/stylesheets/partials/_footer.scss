@@ -62,4 +62,18 @@
      &.footer__link--linkedin {
         background: url('../images/icon-linkedin.png') no-repeat 1px 2px;
     }
+
+    &.footer__link--phone {
+        padding: 0;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .footer__link--phone {
+        text-decoration: underline;
+    }
 }
