@@ -20,8 +20,11 @@
 
     {% block scripts %}{% endblock %}
     <script type="text/javascript">
-        if(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)){
-            document.querySelector('.l-phone-link').classList.add('l-phone-link--mobile');
+        if (window.navigator.userAgent.match(/Mobi/i)) {
+            var links = document.querySelectorAll('.l-phone-link');
+            for (i = 0; i < links.length; ++i) {
+                links[i].classList.add('l-phone-link--mobile');
+            }
         }
     </script>
 </body>
