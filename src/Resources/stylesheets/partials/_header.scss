@@ -15,6 +15,11 @@
         top: 0; right: 0; bottom: 0; left: 0;
         z-index: 0;
     }
+
+
+    .l-phone-link {
+        color: #FFF;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -50,7 +55,7 @@
 .header__content {
     display: inline-block;
     width: 50%;
-    margin-top: 48px;
+    margin-top: 53px;
     vertical-align: top;
 }
 
@@ -60,6 +65,7 @@
 }
 
 .header__content--right {
+    margin-top: 69px;
     text-align: right;
 }
 

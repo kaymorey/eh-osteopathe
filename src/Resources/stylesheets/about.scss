@@ -35,6 +35,10 @@
 .about-accessibility__text {
     margin-left: 102px;
     padding-top: 11px;
+
+    .l-phone-link {
+        color: $text-color;
+    }
 }
 
 .about-accessibility__mail {

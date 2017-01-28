@@ -2,9 +2,34 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    {% set defaultDescription = 'Emine Hakan effectue des consultations à son cabinet à Montfermeil (93370). Elle prend également en charge des urgences ostéopathiques à domicile et effectue des interventions en entreprise.' %}
+    {% set defaultImage = 'http://www.cabinet-eminehkn.com/images/about.jpg' %}
+
+    <meta name="description" content="{{ metaDescription ? metaDescription : defaultDescription }}">
+
+    <meta property="og:url" content="http://www.cabinet-eminehkn.com/{{ slug }}">
+    <meta property="og:title" content="{{ title }}Emine Hakan - Ostéopathe D.O à Montfermeil">
+    <meta property="og:description" content="{{ metaDescription ? metaDescription : defaultDescription }}">
+    <meta property="og:image" content="{{ metaImage ? metaImage : defaultImage }}">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <title>{{ title }}Emine Hakan - Ostéopathe D.O à Montfermeil</title>
 
     {% block stylesheets %}{% endblock %}
+
+    <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-89619042-1', 'auto');
+          ga('send', 'pageview');
+    </script>
 </head>
 <body>
 

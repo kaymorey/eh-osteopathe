@@ -108,7 +108,7 @@ Class ArticleController {
      * @return Article $article Created article with data
      */
     private function getArticleFromOpengraphData($url) {
-        $opengraphUrl = 'https://opengraph.io/api/1.0/site/' . urlencode($url);
+        $opengraphUrl = 'https://opengraph.io/api/1.0/site/' . urlencode($url) . '?app_id=588c785d4169dc0e00b3020b';
 
         $json = file_get_contents($opengraphUrl);
         $data = json_decode($json, true);

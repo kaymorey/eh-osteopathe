@@ -1,7 +1,6 @@
 {% extends 'layout.html.twig' %}
 
 {% set navItem = 'home' %}
-{% set title = 'Emine Hakan - Ostéopathe D.O.' %}
 
 {% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
@@ -35,40 +34,42 @@
                 </p>
             </div>
         </header>
-        <ul class="home-fields__list home-fields__list--left l-text-default">
-            <li class="home-fields__item">
-                <span class="home-fields__item-title">Système musculo-squelettique :</span> Douleurs articulaires, torticolis, cervicalgies, dorsalgies, lombalgies, pubalgies, costalgies, douleurs coccygiennes, arthrose, tendinites, entorses, toute douleur à la suite d’un traumatisme important, certaines types de maux de tête d’origine mécanique, etc.
-            </li>
-            <li class="home-fields__item">
-                <span class="home-fields__item-title">Système neurologique :</span> Sciatiques, cruralgies, névralgie cervico-brachiales, névralgie d’Arnold, névralgie faciale, névralgie intercostales, névralgie pudentales, syndromes canalaires, syndrome de maigne, etc.
-            </li>
-            <li class="home-fields__item">
-                <span class="home-fields__item-title">Système neurovégétatif :</span> Stress, anxiété, angoisse, état dépressifs, irritabilité, difficulté de concentration, troubles du sommeil, prévention du burn-out, etc.
-            </li>
-            <li class="home-fields__item">
-                <span class="home-fields__item-title">Système circulatoire :</span> Troubles circulatoire du retour veineux, sensation de jambes lourdes, œdème, etc.
-            </li>
-            <li class="home-fields__item">
-                <span class="home-fields__item-title">Système ORL :</span> Troubles de la mastication, blocage de la mâchoire, bruxisme, avant un traitement orthodontique, vertiges fonctionnels, prévention des sinusites et otites répétitives, dysphonie fonctionnelles, etc.
-            </li>
-        </ul>
-        <ul class="home-fields__list home-fields__list--right l-text-default">
-            <li class="home-fields__item">
-                <span class="home-fields__item-title">Système respiratoire :</span> Sensation d’oppression thoracique, prévention des bronchites répétitives, accompagnement de l’asthme et des toux chroniques, etc.
-            </li>
-            <li class="home-fields__item">
-                <span class="home-fields__item-title">Système gynéco-urinaire :</span> Suivi de grossesse, syndrome post-partum, dysménorrhées fonctionnelles (douleurs menstruelles), dyspareunies fonctionnelles (douleurs lors des rapports), douleurs fonctionnelles du petit bassin, avant la rééducation périnéale, etc.
-            </li>
-            <li class="home-fields__item">
-                <span class="home-fields__item-title">Système digestif :</span> Reflux gastro-œsophagien (RGO), troubles digestifs, troubles du transit intestinal, lourdeur, ballonnements, nausées, colopathies fonctionnelles, etc.
-            </li>
-            <li class="home-fields__item">
-                <span class="home-fields__item-title">Chez la femme enceinte,</span> l’ostéopathie apportera un bénéfice lors de l’accompagnement de la grossesse ainsi qu’à la préparation de votre bassin pour l’accouchement.
-            </li>
-            <li class="home-fields__item">
-                <span class="home-fields__item-title">Chez les nourissons,</span> il est recommandé de consulter le plus tôt possible pour des motifs comme les torticolis congénitaux, plagiocéphalie, coliques, etc.
-            </li>
-        </ul>
+        <div class="home-fields__lists">
+            <ul class="home-fields__list home-fields__list--left l-text-default">
+                <li class="home-fields__item">
+                    <span class="home-fields__item-title">Système musculo-squelettique :</span> Douleurs articulaires, torticolis, cervicalgies, dorsalgies, lombalgies, pubalgies, costalgies, douleurs coccygiennes, arthrose, tendinites, entorses, toute douleur à la suite d’un traumatisme important, certaines types de maux de tête d’origine mécanique, etc.
+                </li>
+                <li class="home-fields__item">
+                    <span class="home-fields__item-title">Système neurologique :</span> Sciatiques, cruralgies, névralgie cervico-brachiales, névralgie d’Arnold, névralgie faciale, névralgie intercostales, névralgie pudentales, syndromes canalaires, syndrome de maigne, etc.
+                </li>
+                <li class="home-fields__item">
+                    <span class="home-fields__item-title">Système neurovégétatif :</span> Stress, anxiété, angoisse, état dépressifs, irritabilité, difficulté de concentration, troubles du sommeil, prévention du burn-out, etc.
+                </li>
+                <li class="home-fields__item">
+                    <span class="home-fields__item-title">Système circulatoire :</span> Troubles circulatoire du retour veineux, sensation de jambes lourdes, œdème, etc.
+                </li>
+                <li class="home-fields__item">
+                    <span class="home-fields__item-title">Système ORL :</span> Troubles de la mastication, blocage de la mâchoire, bruxisme, avant un traitement orthodontique, vertiges fonctionnels, prévention des sinusites et otites répétitives, dysphonie fonctionnelles, etc.
+                </li>
+            </ul>
+            <ul class="home-fields__list home-fields__list--right l-text-default">
+                <li class="home-fields__item">
+                    <span class="home-fields__item-title">Système respiratoire :</span> Sensation d’oppression thoracique, prévention des bronchites répétitives, accompagnement de l’asthme et des toux chroniques, etc.
+                </li>
+                <li class="home-fields__item">
+                    <span class="home-fields__item-title">Système gynéco-urinaire :</span> Suivi de grossesse, syndrome post-partum, dysménorrhées fonctionnelles (douleurs menstruelles), dyspareunies fonctionnelles (douleurs lors des rapports), douleurs fonctionnelles du petit bassin, avant la rééducation périnéale, etc.
+                </li>
+                <li class="home-fields__item">
+                    <span class="home-fields__item-title">Système digestif :</span> Reflux gastro-œsophagien (RGO), troubles digestifs, troubles du transit intestinal, lourdeur, ballonnements, nausées, colopathies fonctionnelles, etc.
+                </li>
+                <li class="home-fields__item">
+                    <span class="home-fields__item-title">Chez la femme enceinte,</span> l’ostéopathie apportera un bénéfice lors de l’accompagnement de la grossesse ainsi qu’à la préparation de votre bassin pour l’accouchement.
+                </li>
+                <li class="home-fields__item">
+                    <span class="home-fields__item-title">Chez les nourissons,</span> il est recommandé de consulter le plus tôt possible pour des motifs comme les torticolis congénitaux, plagiocéphalie, coliques, etc.
+                </li>
+            </ul>
+        </div>
         <footer class="home-fields__footer">
             <p class="l-text-default">
                 Il est possible de consulter <strong>à titre préventif</strong> pour faire un bilan et éviter que certaines dysfonctions ne deviennent symptomatiques, cela permet de repérer et de traiter les blocages avant que ceux-ci n’aboutissent à une douleur, Dans ce cas, une séance semestrielle est recommandée.
@@ -119,13 +120,19 @@
 {% block scripts %}
     <script type="text/javascript">
     var seeAllBtn = document.querySelector('.home-articles__see-all');
-    var hiddenArticles = [...document.querySelectorAll('.home-articles__article--hidden')]
+    var hiddenArticles = document.querySelectorAll('.home-articles__article--hidden');
 
-    seeAllBtn.addEventListener('click', function () {
-        hiddenArticles.forEach(function (article) {
-            article.style.display = 'inline-block';
-            seeAllBtn.style.display = 'none';
-        })
-    })
+    if (seeAllBtn.addEventListener){
+        seeAllBtn.addEventListener('click', showArticles);
+    } else if (seeAllBtn.attachEvent) {
+        seeAllBtn.attachEvent('onclick', showArticles);
+    }
+
+    function showArticles () {
+        for (i = 0; i < hiddenArticles.length; ++i) {
+            hiddenArticles[i].style.display = 'inline-block';
+        }
+        seeAllBtn.style.display = 'none';
+    }
     </script>
 {% endblock %}

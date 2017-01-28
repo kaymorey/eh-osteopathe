@@ -94,15 +94,23 @@
     .home-articles__article {
         display: inline-block;
         width: 266px;
+        margin-bottom: 20px;
         vertical-align: top;
 
         &:nth-of-type(3n+2) {
             padding: 0 19px;
         }
+
+        &.home-articles__article--hidden {
+            display: none;
+        }
     }
 
-    .home-article__img {
+    .home-article__img-box {
+        width: 266px;
+        height: 175px;
         margin-bottom: 20px;
+        background-size: cover;
     }
 
     .home-article__title {
@@ -128,7 +136,7 @@
     }
 
     .home-articles__see-all-container {
-        padding-top: 45px;
+        padding-top: 25px;
         text-align: center;
 
         .home-articles__see-all {
