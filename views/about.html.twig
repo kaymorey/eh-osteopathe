@@ -3,8 +3,40 @@
 {% set navItem = 'praticien' %}
 {% set title = 'Votre praticien - ' %}
 
+{% block canonicalLink %}
+    <link rel="canonical" href="http://www.cabinet-eminehkn.com/votre-praticien">
+{% endblock %}
+
 {% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="stylesheets/about.css">
+{% endblock %}
+
+{% block jsonld %}
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@id": "http://www.cabinet-eminehkn.com/",
+                    "name": "cabinet-eminehkn.com"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@id": "http://www.cabinet-eminehkn.com/votre-praticien",
+                    "name": "Votre praticien",
+                    "image": "http://www.cabinet-eminehkn.com/images/about.jpg"
+                }
+            }
+        ]
+    }
+    </script>
 {% endblock %}
 
 {% block content %}

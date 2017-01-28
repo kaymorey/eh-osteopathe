@@ -4,8 +4,40 @@
 {% set title = 'La consultation - ' %}
 {% set metaDescription = 'La consultation dure en moyenne 45 minutes. Celle-ci commence par un interrogatoire détaillé, qui est une étape pendant laquelle votre praticienne récolte des informations afin de comprendre précisément le motif de consultation mais aussi établir un diagnostic d’exclusion.' %}
 
+{% block canonicalLink %}
+    <link rel="canonical" href="http://www.cabinet-eminehkn.com/la-consultation">
+{% endblock %}
+
 {% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="stylesheets/consultation.css">
+{% endblock %}
+
+{% block jsonld %}
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@id": "http://www.cabinet-eminehkn.com/",
+                    "name": "cabinet-eminehkn.com"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@id": "http://www.cabinet-eminehkn.com/consultation",
+                    "name": "La consultation",
+                    "image": "http://www.cabinet-eminehkn.com/images/cabinet.jpg"
+                }
+            }
+        ]
+    }
+    </script>
 {% endblock %}
 
 {% block content %}
